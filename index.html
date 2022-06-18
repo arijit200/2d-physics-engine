@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics-Engine</title>
+</head>
+<body style="font-family: Fira Code;" onkeydown="return userControl(event);" onmousedown="return createShapes(event);">
+
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <canvas id="canvas" style="border: 3px solid black;"></canvas>    
+                </div>
+            </td>
+            <td>
+                <h1>2D Physics Engine</h1>
+                <div><b> <---------- Select a scene ---------> </b></div>
+                <select id="scene">
+                    <option value="Dummy" selected>Choose a scene...</option>
+                    <option value="Scene1">Basic</option>
+                    <option value="Scene2">Zig-Zag</option>
+                    <option value="Scene3">Face</option>
+                </select>
+                <button onclick="var game = new MyGame(); gEngine.Core.initialiseEngineCore()">Load</button>
+                <div id="uiEchoString">  </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- javascript files ===================================>>>>>> --> 
+    <script type="text/javascript" src="Lib/Vec2.js"></script>
+    <script type="text/javascript" src="Lib/CollisionInfo.js"></script>
+
+    <script type="text/javascript" src="RigidBody/RigidShape.js"></script>
+    <script type="text/javascript" src="RigidBody/Rectangle.js"></script>
+    <script type="text/javascript" src="RigidBody/Circle.js"></script>
+
+    <script type="text/javascript" src="EngineCore/Core.js"></script>
+    <script type="text/javascript" src="EngineCore/Physics.js"></script>
+
+    <script type="text/javascript" src="Scenes.js"></script>
+
+    <script type="text/javascript" src="UserControl.js"></script>
+
+    <!-- end ==================================================>>>>>>-->
+
+</body>
+</html>
