@@ -6,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics-Engine</title>
 </head>
-<body style="font-family: Fira Code;" onkeydown="return userControl(event);" onmousedown="return createShapes(event);">
+<body style="font-family: Fira Code; background: #cfcfcf;" onkeydown="return userControl(event);" onmousedown="return createShapes(event);">
 
+
+    <nav style="display: flex; justify-content:center; background-color: #474747">
+        <div class="nav-wrapper">
+          <h1 style="font-size: 30px; color: white;"><b>2D Physics Engine</b></h1>
+        </div>
+      </nav>
     <table>
         <tr>
             <td>
                 <div>
-                    <canvas id="canvas" style="border: 3px solid black;"></canvas>    
+                    <canvas id="canvas" style="border: 20px solid black;"></canvas>    
                 </div>
             </td>
             <td>
-                <h1>2D Physics Engine</h1>
-                <div><b> <---------- Select a scene ---------> </b></div>
-                <select id="scene">
-                    <option value="Dummy" selected>Choose a scene...</option>
+
+                <div><h2><---------- Select a scene ---------> </h2></div>
+                <select id="scene" style="padding: 10px; background:#edf2ff; border:none;">
+                    <option value="Dummy" selected>Choose a Scene ...</option>
                     <option value="Scene1">Basic</option>
                     <option value="Scene2">Zig-Zag</option>
-                    <option value="Scene3">Face</option>
+                    <option value="Scene3">Skull</option>
                 </select>
-                <button onclick="var game = new MyGame(); gEngine.Core.initialiseEngineCore()">Load</button>
+                <button onclick="var game = new MyGame(); gEngine.Core.initialiseEngineCore()" 
+                style="padding: 10px 16px; font-size: 18px; border-radius: 30px; background-color: #474747; border: none; color: white;">Load</button>
                 <div id="uiEchoString">  </div>
             </td>
         </tr>

@@ -24,7 +24,7 @@ correctly defined within the MY_NAMESPACE object correctly.
 */
 
 gEngine.Core = (function() {
-    var mCanvas, mContext, mWidth=1080, mHeight=800;
+    var mCanvas, mContext, mWidth=1080, mHeight=720;
     mCanvas = document.getElementById('canvas');
     mContext = mCanvas.getContext('2d');
     mCanvas.height = mHeight;
@@ -53,7 +53,7 @@ gEngine.Core = (function() {
     var updateUIEcho = function(){
         document.getElementById('uiEchoString').innerHTML=
         "<hr>"+
-        "<p><b><------- Selected Object -------> </b></p>" + 
+        "<p><b> <h2> <------- Selected Object -------> </h2> </b></p>" + 
         "<ul style=\"margin:--10px\">" +
         "<li>Id --> " + gObjectNum + "</li>" + 
         "<li>Center --> x : " + mAllObjects[gObjectNum].mCenter.x.toPrecision(3) + " , y : " +
@@ -68,7 +68,7 @@ gEngine.Core = (function() {
         "</ul><hr>" + 
 
 
-        "<p><b><------- Control of Selected Object -------></b></p>" + 
+        "<p><b> <h2> <------- Control of Selected Object -------> </h2> </b></p>" + 
         "<ul style=\margin:-10px\">" + 
         "<li><b>Up/Down Arrow</b> --> SelectObject</li>" + 
         "<li><b>WASD</b> + <b>QE</b> --> Position [Move + Rotate]</li>" +
@@ -79,7 +79,7 @@ gEngine.Core = (function() {
         "</ul><hr>" + 
 
 
-        "<p><b><------- Global Control -------></b></p>" +
+        "<p><b> <h2> <------- Global Control -------></h2></b></p>" +
         "<ul style=\margin:-10px\>"+
         "<li><b>Left/Right Click</b> --> Spawn [Circle/Rectangle]</li>" + 
         "<li><b>Spacebar</b> --> [Play/Pause]</li>" +

@@ -123,11 +123,11 @@ function userControl(event){
         }
         else if(t===2)
         {
-            gEngine.Core.mAllObjects.splice(6, gEngine.Core.mAllObjects.length);
+            gEngine.Core.mAllObjects.splice(5, gEngine.Core.mAllObjects.length);
         }
         else if(t===3)
         {
-            gEngine.Core.mAllObjects.splice(12, gEngine.Core.mAllObjects.length);
+            gEngine.Core.mAllObjects.splice(7, gEngine.Core.mAllObjects.length);
         }
        
         gObjectNum = 0;
@@ -146,8 +146,8 @@ function userControl(event){
 function createShapes(event){
     if(event.button == 2)
     {
-        var x = event.x-15;
-        var y = event.y-15;
+        var x = event.x-30;
+        var y = event.y-126;
         var w = Math.random()*50+15;
         var h = Math.random()*50+15
         // var ang = Math.random();
@@ -161,11 +161,12 @@ function createShapes(event){
         // context.arc(event.x-10 , event.y-10, Math.random()*30+10, 0, Math.PI*2, true);
         // context.closePath();
         // context.stroke();
-        var x = event.x-15;
-        var y = event.y-15;
+        var x = event.x-30;
+        var y = event.y-126;
         var radius = Math.random()*30+10;
         if(x + radius <= cw && x - radius >= 0 && y - radius >= 0 && y + radius <= ch) 
         var r1 = new Circle(new Vec2(x , y), radius, Math.random() * 30, Math.random(), Math.random());
+        
         
     }
 }
